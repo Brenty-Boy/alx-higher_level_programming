@@ -8,4 +8,3 @@ def weight_average(my_list=[]):
         res += x * y
         res2 += y
     return (res / res2)
-

@@ -6,4 +6,3 @@ def best_score(my_dict):
     for key, value in my_dict.items():
         if value is biggest:
             return key
-

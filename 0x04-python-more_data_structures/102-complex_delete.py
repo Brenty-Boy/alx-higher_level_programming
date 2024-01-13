@@ -7,4 +7,3 @@ def complex_delete(my_dict, value):
     for x in targets:
         del my_dict[x]
     return (my_dict)
-
