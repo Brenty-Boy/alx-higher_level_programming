@@ -2,10 +2,12 @@
 """
 
 A function that adds two numbers
+
 """
 
+
 def add_integer(a, b=98):
-    """ Function that adds two integers and/or float numbers
+    """ Function that adds two integer and/or float numbers
 
     Args:
         a: first number
@@ -26,3 +28,4 @@ def add_integer(a, b=98):
     a = int(a)
     b = int(b)
     return (a + b)
+

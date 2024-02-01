@@ -56,3 +56,4 @@ def matrix_divided(matrix, div):
 
     d = list(map(lambda x: list(map(lambda y: round(y / div, 2), x)), matrix))
     return (d)
+
