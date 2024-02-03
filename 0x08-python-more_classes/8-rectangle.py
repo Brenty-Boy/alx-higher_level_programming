@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-"""Defining a Rectangle class."""
-
+"""Defines a Rectangle class."""
 
 class Rectangle:
-    """Representing a rectangle.
+    """Represent a rectangle.
 
     Attributes:
         number_of_instances (int): The number of Rectangle instances.
@@ -14,13 +13,13 @@ class Rectangle:
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        """Initializing a new Rectangle.
+        """Initialize a new Rectangle.
 
         Args:
             width (int): The width of the new rectangle.
             height (int): The height of the new rectangle.
         """
-        type(self).number_of_instances += 1
+       type(self).number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -60,6 +59,24 @@ class Rectangle:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
 
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """Return the Rectangle with the greater area.
+
+        Args:
+            rect_1 (Rectangle): The first Rectangle.
+            rect_2 (Rectangle): The second Rectangle.
+        Raises:
+            TypeError: If either of rect_1 or rect_2 is not a Rectangle.
+        """
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return (rect_1)
+        return (rect_2)
+
     def __str__(self):
         """Return the printable representation of the Rectangle.
 
@@ -69,9 +86,9 @@ class Rectangle:
             return ("")
 
         rect = []
-        for d in range(self.__height):
-            [rect.append(str(self.print_symbol)) for m in range(self.__width)]
-            if d != self.__height - 1:
+        for i in range(self.__height):
+            [rect.append(str(self.print_symbol)) for j in range(self.__width)]
+            if i != self.__height - 1:
                 rect.append("\n")
         return ("".join(rect))
 
